@@ -1,2 +1,0 @@
-*.ckpt filter=lfs diff=lfs merge=lfs -text
-modelbest.ckpt filter=lfs diff=lfs merge=lfs -text
