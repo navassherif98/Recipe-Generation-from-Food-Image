@@ -1,0 +1,93 @@
+{% extends "header.html" %}
+{% block content %}
+
+<div id="section-2">
+  <div class="container pt-5">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="wrapper">
+              <div class="image">
+                  {% if img %}
+                  <img id="foodimage" onload="$(this).data('loaded', 'loaded');" src="{{ url_for('static',filename=img)}}" alt="">
+                  {% else %}
+                  <img id="foodimage" onload="$(this).data('loaded', 'loaded');" src="" alt="">
+                  
+                  {% endif %}
+                  
+
+              </div>
+              <div class="content">
+                  <div class="icon text-center">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                  </div>
+                  <div class="text">
+                      No file chosen, yet!
+                  </div>
+              </div>
+              <div id="cancel-btn">
+                  <i class="fas fa-times"></i>
+              </div>
+              <div class="file-name">
+                  File name here
+              </div>
+              </div>
+              <button onclick="defaultBtnActive()" id="custom-btn">Upload a Food Image</button>
+              <form id='foodimgform'action="/" method="POST" enctype="multipart/form-data">
+                <input id="default-btn" type="file" hidden name="imagefile">
+              </form>
+              <button id="buttonsample" data-toggle="modal" data-target="#myModal">Choose from Sample Image</button>
+              <div class="modal" id="myModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Sample Food Images</h5>
+                      <button id="close" type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{ url_for('static',filename='images/burger.jpg') }}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Burger</h5>
+                                      <a href="burger" class="btn btn-primary" onclick="select('burger.jpg')">Select</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{ url_for('static',filename='images/chocolate-cake.jpg') }}" class="card-img-top" alt="..." >
+                                    <div class="card-body">
+                                      <h5 class="card-title">Chocolate Cake</h5>
+                                      <a href="chocolate-cake" class="btn btn-primary" onclick="select('chocolate-cake.jpg')" >Select</a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{ url_for('static',filename='images/grilled-beef.jpg') }}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Grilled Beef</h5>
+                                      <a href="grilled-beef" class="btn btn-primary" onclick="select('grilled-beef.jpg')">Select</a>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+
+  {% block home %}{% endblock %}
+
+  {% endblock %}
+
