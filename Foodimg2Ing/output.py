@@ -13,12 +13,13 @@ from Foodimg2Ing.utils.output_utils import prepare_output
 from PIL import Image
 import time
 from tensorflow.keras.preprocessing import image
+from Foodimg2Ing import app
 
 
 def output(uploadedfile):
 
     # Keep all the codes and pre-trained weights in data directory
-    data_dir = r'F:\PROJECTS\Flask Projects\Test1\data'
+    data_dir=os.path.join(app.root_path,'data')
 
 
     # code will run in gpu if available and if the flag is set to True, else it will run on cpu
@@ -36,9 +37,7 @@ def output(uploadedfile):
     instrs_vocab_size = len(vocab)
     output_dim = instrs_vocab_size
 
-    #print ('Instruction Vocab :',instrs_vocab_size,'\nIngredients Vocab :' , ingr_vocab_size) 
-    # print size of each vocabulary in terms of words
-
+    
 
     t = time.time()
     import sys; sys.argv=['']; del sys
@@ -46,6 +45,7 @@ def output(uploadedfile):
     args.maxseqlen = 15
     args.ingrs_only=False
     model=get_model(args, ingr_vocab_size, instrs_vocab_size)
+   
     # Load the pre-trained model parameters
     model_path = os.path.join(data_dir, 'modelbest.ckpt')
     model.load_state_dict(torch.load(model_path, map_location=map_loc))
@@ -53,9 +53,7 @@ def output(uploadedfile):
     model.eval()
     model.ingrs_only = False
     model.recipe_only = False
-    #print ('loaded model')
-    #print ("Elapsed time:", time.time() -t) # Find the time required to load the model
-
+   
 
 
     transf_list_batch = []
@@ -69,14 +67,10 @@ def output(uploadedfile):
     temperature = 1.0
     numgens = len(greedy)
 
-    #uploaded_file=r'F:\PROJECTS\Flask Projects\Test1\data\demo_imgs\burger.jpg'
     uploaded_file=uploadedfile
 
     img=image.load_img(uploaded_file)
-    #img = image.resize((250,250), Image.ANTIALIAS)
-
-
-    #display(img)
+    
     show_anyways = False #if True, it will show the recipe even if it's not valid
     transf_list = []
     transf_list.append(transforms.Resize(256))
@@ -102,31 +96,15 @@ def output(uploadedfile):
             
         if valid['is_valid'] or show_anyways:
                 
-            #print ('RECIPE', num_valid)
-            #num_valid+=1
-            #print ("greedy:", greedy[i], "beam:", beam[i])
-        
-            #BOLD = '\033[1m'
-            #END = '\033[0m'
-        
-            #print (BOLD + '\nTitle:' + END,outs['title'])
             title.append(outs['title'])
 
-            #print (BOLD + '\nIngredients:'+ END)
-            #print (', '.join(outs['ingrs']))
             ingredients.append(outs['ingrs'])
 
-            #print (BOLD + '\nInstructions:'+END)
-            #print ('-'+'\n-'.join(outs['recipe']))
             recipe.append(outs['recipe'])
-
-            #print ('='*20)
-            #print('\n'*3)
             
 
         else:
             title.append("Not a valid recipe!")
             recipe.append("Reason: "+valid['reason'])
-            #print ("Not a valid recipe!")
-            #print ("Reason: ", valid['reason'])
+            
     return title,ingredients,recipe
