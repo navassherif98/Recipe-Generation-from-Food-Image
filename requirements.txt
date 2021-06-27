@@ -44,7 +44,8 @@ tensorflow == 2.5.0
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\ims2file.py: 6
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\metrics.py: 6
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\tb_visualizer.py: 3
-numpy == 1.18.5
+numpy == 1.19.3
+typing-extensions ==3.7.4
 
 
 
