@@ -10,11 +10,6 @@ Flask == 1.1.2
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\ims2file.py: 7
 Pillow == 7.2.0
 
-# F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\modules\utils.py: 273,287
-fairseq == 0.10.2
-
-# F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\ims2file.py: 9
-lmdb == 1.2.1
 
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\output.py: 3
 matplotlib == 3.2.2
@@ -34,11 +29,6 @@ scipy == 1.4.1
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\tb_visualizer.py: 11
 tensorboard-pytorch == 0.7.1
 
-# F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\tb_visualizer.py: 11
-tensorboardx == 2.2
-
-# F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\tb_visualizer.py: 11
-tensorboardx-hparams == 1.7.2
 
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\output.py: 15
 tensorflow == 2.3.1
