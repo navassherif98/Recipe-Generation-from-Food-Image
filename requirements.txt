@@ -23,8 +23,6 @@ matplotlib == 3.2.2
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\tb_visualizer.py: 3
 numpy == 1.18.2
 
-# F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\tb_visualizer.py: 8
-scipy == 1.4.1
 
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\tb_visualizer.py: 11
 tensorboard-pytorch == 0.7.1
