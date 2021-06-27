@@ -77,7 +77,7 @@ margin-right: 60px;
 
 @media (min-width: 576px){
 .modal-dialog {
-    max-width: fit-content;
+    max-width: 80%;
     margin: 1.75rem auto;
 }
 }
