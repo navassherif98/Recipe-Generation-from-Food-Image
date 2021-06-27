@@ -21,13 +21,13 @@ matplotlib == 3.2.2
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\ims2file.py: 6
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\metrics.py: 6
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\tb_visualizer.py: 3
-numpy == 1.21.0
+numpy == 1.18.5
 
 
 
 
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\output.py: 15
-tensorflow == 2.2 
+tensorflow == 2.3.0
 
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\model.py: 3,4
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\modules\encoder.py: 4,5
