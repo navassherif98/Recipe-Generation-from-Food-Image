@@ -21,7 +21,7 @@ matplotlib == 3.2.2
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\ims2file.py: 6
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\metrics.py: 6
 # F:\PROJECTS\Flask Projects\Recipe Generation from Food Image\Foodimg2Ing\utils\tb_visualizer.py: 3
-numpy == 1.18.2
+numpy == 1.18.5
 
 
 
