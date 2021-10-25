@@ -20,8 +20,9 @@ Download these files and replace it with the files in this folder "Foodimg2Ing/d
 
 ### To run the Code :
 
-1. Install all the required libraries using "pip install -r requirements.txt"
-2. open terminal and run "python run.py"
+1. Open Terminal (cmd)
+2. Install all the required libraries using "pip install -r requirements.txt"
+3. run "python run.py"
 
 You will be getting a localhost link and open that link in your browser 
 
