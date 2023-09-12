@@ -11,21 +11,21 @@ Are you ever in the situation where you have a mouthwatering picture of a delici
 
 This innovative application uses state-of-the-art deep learning techniques to analyze food images and generate comprehensive cooking recipes. From a simple snapshot of your favorite dish, our system can extract essential information including:
 
-Recipe Title: A catchy and descriptive title for the dish.
+**Recipe Title**: A catchy and descriptive title for the dish.
 
-Ingredients: A detailed list of all the ingredients needed.
+**Ingredients**: A detailed list of all the ingredients needed.
 
-Instructions: Step-by-step cooking instructions to help you recreate the dish flawlessly.
+**Instructions**: Step-by-step cooking instructions to help you recreate the dish flawlessly.
 
 ### Key Features:
 
-Deep Learning Magic: Our model employs cutting-edge computer vision algorithms to identify ingredients and cooking processes within food images.
+**Deep Learning Magic**: Our model employs cutting-edge computer vision algorithms to identify ingredients and cooking processes within food images.
 
-Natural Language Generation: It utilizes advanced natural language processing to create coherent and easy-to-follow cooking instructions.
+**Natural Language Generation**: It utilizes advanced natural language processing to create coherent and easy-to-follow cooking instructions.
 
-User-Friendly Interface: A user-friendly web or mobile interface for hassle-free recipe generation.
+**User-Friendly Interface**: A user-friendly web or mobile interface for hassle-free recipe generation.
 
-Endless Culinary Exploration: Discover new recipes and cuisines by simply snapping a picture of any dish.
+**Endless Culinary Exploration**: Discover new recipes and cuisines by simply snapping a picture of any dish.
 
 ---
 
